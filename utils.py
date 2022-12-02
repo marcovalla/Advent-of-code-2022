@@ -18,8 +18,8 @@ class Utils:
     def getInputDayTwo(self):
         myInput = []
         endOfInput = False
-        myPlay = 2
-        oponentPlay = 0
+        firstValue = 0
+        secondValue = 2
 
         while not endOfInput:
             value = input()
@@ -27,7 +27,7 @@ class Utils:
             if value == self.END_OF_INPUT:
                 endOfInput = True
             else:
-                currentPlay.append(value[oponentPlay])
-                currentPlay.append(value[myPlay])
+                currentPlay.append(value[firstValue])
+                currentPlay.append(value[secondValue])
                 myInput.append(currentPlay)
         return myInput
