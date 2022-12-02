@@ -1,8 +1,4 @@
-from day_one import DayOne
-from utils import Utils
+from daily_tasks import DailyTasks
 
-utils = Utils()
-dayOne = DayOne()
-
-partTwo = dayOne.getMaxAmountOfCaloriesForThreeElves(utils.getInput())
-print(partTwo)
+dailyTasks = DailyTasks()
+dailyTasks.runDayTwo()
