@@ -12,21 +12,32 @@ class DayTwo:
     DRAW = "D"
     WIN = "W"
 
-    def getTotalScorePartOne(self, myInput):
+    def getTotalScorePartOne(self, input):
+        myInput = self.processInput(input)
         totalScore = 0
         for values in myInput:
             myHand = self.getHand(values[1])
-            oponentsHand = self.getHand(values[0])
-            totalScore += self.getRoundResultScore(myHand, oponentsHand) + self.getHandScore(myHand)
+            opponentsHand = self.getHand(values[0])
+            totalScore += self.getRoundResultScore(myHand, opponentsHand) + self.getHandScore(myHand)
         return totalScore
+
+    def processInput(self, input):
+        myInput = []
+        firstValue = 0
+        secondValue = 2
+        for i in range(len(input)):
+            value = input[i]
+            currentPlay = [value[firstValue], value[secondValue]]
+            myInput.append(currentPlay)
+        return myInput
 
     def getTotalScorePartTwo(self, myInput):
         totalScore = 0
         for values in myInput:
             plannedResult = self.getPlannedResult(values[1])
-            oponentsHand = self.getHand(values[0])
-            myHand = self.getPlannedHand(plannedResult, oponentsHand)
-            totalScore += self.getRoundResultScore(myHand, oponentsHand) + self.getHandScore(myHand)
+            opponentsHand = self.getHand(values[0])
+            myHand = self.getPlannedHand(plannedResult, opponentsHand)
+            totalScore += self.getRoundResultScore(myHand, opponentsHand) + self.getHandScore(myHand)
         return totalScore
 
     def getRoundResultScore(self, playerOne, playerTwo):
@@ -65,18 +76,18 @@ class DayTwo:
         elif value == "Z":
             return self.WIN
 
-    def getPlannedHand(self, plannedResult, oponentsHand):
+    def getPlannedHand(self, plannedResult, opponentsHand):
         if plannedResult == self.DRAW:
-            return oponentsHand
+            return opponentsHand
         elif plannedResult == self.WIN:
-            return self.getWinningHand(oponentsHand)
+            return self.getWinningHand(opponentsHand)
         elif plannedResult == self.LOSE:
-            return self.getWinningHand(self.getWinningHand(oponentsHand))
+            return self.getWinningHand(self.getWinningHand(opponentsHand))
 
-    def getWinningHand(self, oponentsHand):
-        if oponentsHand == self.ROCK:
+    def getWinningHand(self, opponentsHand):
+        if opponentsHand == self.ROCK:
             return self.PAPER
-        elif oponentsHand == self.PAPER:
+        elif opponentsHand == self.PAPER:
             return self.SCISSORS
-        elif oponentsHand == self.SCISSORS:
+        elif opponentsHand == self.SCISSORS:
             return self.ROCK

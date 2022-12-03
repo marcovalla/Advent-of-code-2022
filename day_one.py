@@ -1,13 +1,18 @@
 class DayOne:
 
-    def getMaxAmountOfCalories(self, myInput):
+    def getMaxAmountOfCalories(self, input):
+        myInput = self.processInput(input)
         calories = self.__getCaloriesByElf(myInput)
-        calories.sort(reverse = True)
+        calories.sort(reverse=True)
         return calories[0]
+
+    def processInput(self, input):
+        myInput = input.append('')
+        return myInput
 
     def getMaxAmountOfCaloriesForThreeElves(self, myInput):
         calories = self.__getCaloriesByElf(myInput)
-        calories.sort(reverse = True)
+        calories.sort(reverse=True)
         return calories[0]+calories[1]+calories[2]
 
     def __getCaloriesByElf(self, myInput):
