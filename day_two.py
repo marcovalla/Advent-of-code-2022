@@ -50,7 +50,11 @@ class DayTwo:
                 return self.LOSE_SCORE
 
     def playerWin(self, playerOne, playerTwo):
-        return (playerOne == self.ROCK and playerTwo == self.SCISSORS) or (playerOne == self.PAPER and playerTwo == self.ROCK) or (playerOne == self.SCISSORS and playerTwo == self.PAPER)
+        rockBeatsScissors = playerOne == self.ROCK and playerTwo == self.SCISSORS
+        paperBeatsRock = playerOne == self.PAPER and playerTwo == self.ROCK
+        scissorsBeatsPaper = playerOne == self.SCISSORS and playerTwo == self.PAPER
+        winCondition = rockBeatsScissors or paperBeatsRock or scissorsBeatsPaper
+        return winCondition
 
     def getHandScore(self, playersHand):
         if playersHand == self.ROCK:
