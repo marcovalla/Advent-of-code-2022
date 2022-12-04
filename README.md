@@ -23,11 +23,11 @@ There is two ways to enter an input for the daily tasks
 
 1. From a file
 
-  The daily inputs are located in the folder: "Daily inputs"
+	The daily inputs are located in the folder: "Daily inputs"
 
 2. From console
 
-  The user may enter the character '.' in a new single line to finish the input
+	The user may enter the character '.' in a new single line to finish the input
 
 ## Utils
 
