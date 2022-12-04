@@ -5,7 +5,6 @@
 
 Python resolution for the Advent of Code 2022
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Resolution
 
@@ -30,13 +29,9 @@ There is two ways to enter an input for the daily tasks
 
   The user may enter the character '.' in a new single line to finish the input
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Utils
 
 The file "utils.py" contains the source code to manage inputs
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Main
 
@@ -50,7 +45,7 @@ The main.py file runs the daily tasks by calling the functions for each day
 - [x] Day 2
   - [x] :star:
   - [x] :star:
-- [ ] Day 3
+- [x] Day 3
   - [x] :star:
   - [x] :star:
 - [x] Day 4
@@ -119,8 +114,6 @@ The main.py file runs the daily tasks by calling the functions for each day
 - [ ] Day 25
   - [ ] :star:
   - [ ] :star:
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
