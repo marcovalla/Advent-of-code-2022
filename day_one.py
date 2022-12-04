@@ -7,10 +7,11 @@ class DayOne:
         return calories[0]
 
     def processInput(self, input):
-        myInput = input.append('')
-        return myInput
+        input.append('')
+        return input
 
-    def getMaxAmountOfCaloriesForThreeElves(self, myInput):
+    def getMaxAmountOfCaloriesForThreeElves(self, input):
+        myInput = self.processInput(input)
         calories = self.__getCaloriesByElf(myInput)
         calories.sort(reverse=True)
         return calories[0]+calories[1]+calories[2]

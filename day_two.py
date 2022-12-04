@@ -61,7 +61,7 @@ class DayTwo:
             return self.ROCK_SCORE
         elif playersHand == self.PAPER:
             return self.PAPER_SCORE
-        elif playersHand == self.SCISSORS:
+        else:
             return self.SCISSORS_SCORE
 
     def getHand(self, value):

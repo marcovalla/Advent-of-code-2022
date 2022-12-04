@@ -2,7 +2,8 @@ class Utils:
 
     END_OF_INPUT = '.'
 
-    def getInput(self):
+    def getInputFromConsole(self):
+        print("Enter input ended by '.'")
         myInput = []
         endOfInput = False
 
@@ -12,4 +13,12 @@ class Utils:
                 endOfInput = True
             else:
                 myInput.append(value)
+        return myInput
+
+    def getInputFromFile(self, filepath):
+        file = open(filepath, "r")
+        myInput = []
+        for line in file:
+            myInput.append(line.replace("\n", ""))
+        file.close()
         return myInput
