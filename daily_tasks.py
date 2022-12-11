@@ -1,5 +1,7 @@
+from day_five import DayFive
 from day_four import DayFour
 from day_one import DayOne
+from day_six import DaySix
 from day_three import DayThree
 from day_two import DayTwo
 from utils import Utils
@@ -52,3 +54,25 @@ class DailyTasks:
 
         partTwo = dayFour.getAmountOfOverlappingRanges(myInput)
         print("The amount of teams with overlapped ranges is: ", partTwo)
+
+    def runDayFive(self):
+        dayFive = DayFive()
+        dayFivePath = self.DAILY_TASKS_PATH + "Day five.txt"
+        myInput = self.utils.getInputFromFile(dayFivePath)
+
+        partOne = dayFive.getTopCratesFromCrateMover9000(myInput)
+        print("CrateMover9000: The crates that end up on top of each stack are: ", partOne)
+
+        partTwo = dayFive.getTopCratesFromCrateMover9001(myInput)
+        print("CrateMover9001: The crates that end up on top of each stack are: ", partTwo)
+
+    def runDaySix(self):
+        daySix = DaySix()
+        daySixPath = self.DAILY_TASKS_PATH + "Day six.txt"
+        myInput = self.utils.getInputFromFile(daySixPath)
+
+        partOne = daySix.getFirstStartOfPacketMarkerIndex(myInput)
+        print("The amount of characters processed before the packet marker is: ", partOne)
+
+        partTwo = daySix.getFirstStartOfPacketMessageIndex(myInput)
+        print("The amount of characters processed before the packet marker is: ", partTwo)
