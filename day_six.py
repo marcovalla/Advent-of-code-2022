@@ -4,10 +4,10 @@ class DaySix:
     SIZE_OF_MESSAGE_MARKER = 14
 
     def getFirstStartOfPacketMarkerIndex(self, input):
-        return self.getSetOfCharForSize(input, self.SIZE_OF_PACKET_MARKER)
+        return self.getSetOfUniqueCharsForSize(input, self.SIZE_OF_PACKET_MARKER)
 
     def getFirstStartOfPacketMessageIndex(self, input):
-        return self.getSetOfCharForSize(input, self.SIZE_OF_MESSAGE_MARKER)
+        return self.getSetOfUniqueCharsForSize(input, self.SIZE_OF_MESSAGE_MARKER)
 
     def processInput(self, input):
         myInput = ""
@@ -15,7 +15,7 @@ class DaySix:
             myInput += line
         return myInput
 
-    def getSetOfCharForSize(self, input, size):
+    def getSetOfUniqueCharsForSize(self, input, size):
         myInput = self.processInput(input)
         charIndex = 0
         markerFounded = False

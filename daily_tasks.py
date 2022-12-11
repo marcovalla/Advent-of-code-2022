@@ -1,11 +1,11 @@
 from day_five import DayFive
 from day_four import DayFour
 from day_one import DayOne
+from day_seven import DaySeven
 from day_six import DaySix
 from day_three import DayThree
 from day_two import DayTwo
 from utils import Utils
-
 
 class DailyTasks:
 
@@ -76,3 +76,11 @@ class DailyTasks:
 
         partTwo = daySix.getFirstStartOfPacketMessageIndex(myInput)
         print("The amount of characters processed before the packet marker is: ", partTwo)
+
+    def runDaySeven(self):
+        daySeven = DaySeven()
+        daySevenPath = self.DAILY_TASKS_PATH + "Day seven.txt"
+        myInput = self.utils.getInputFromFile(daySevenPath)
+
+        partOne = daySeven.getSumOfSizesOfSelectedDirectories(myInput)
+        print("day 7 ", partOne)
