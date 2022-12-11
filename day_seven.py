@@ -29,7 +29,7 @@ class DaySeven:
         return rootNode
 
     def setCurrentDirectory(self, input, lineIndex, currentDir: Node):
-        
+
         endOfList = False
         while not endOfList:
             lineIndex += 1
