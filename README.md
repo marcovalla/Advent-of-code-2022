@@ -19,6 +19,8 @@ The problem description for each task are located in the folder: "Daily tasks"
 
 ### Inputs
 
+Input validation for data types (e.g., expecting an integer) is **not** included. Entering an incorrect type (like a character instead of a number) will cause a runtime crash. Please ensure you enter the correct data types.
+
 There is two ways to enter an input for the daily tasks
 
 1. From a file
